@@ -66,7 +66,7 @@
 }
 
 .right_side {
-  width: 60vw;
+  width: 58vw;
   /* height: 100vh; */
   display: flex;
   /* align-content: center; */
@@ -79,7 +79,8 @@
   border-radius: 25px;
   background: #d9d9d9;
   color: #000;
-  padding: 40px 10px;
+  padding: 40px 0px;
+  max-width: 630px;
 }
 
 p {
@@ -102,8 +103,17 @@ p {
   border-radius: 25px;
   border: 1px solid #000;
   background: #fff;
-  height: 3em;
+  height: 40px;
   width: 100%;
+  color: #000;
+  font-family: 'Inter';
+  font-size: large;
+}
+
+/* Estilo para inputs autocompletados */
+.inputs_form:-webkit-autofill {
+  box-shadow: 0 0 0 30px white inset; /* Cambia el color de fondo */
+  -webkit-text-fill-color: #000; /* Cambia el color del texto */
 }
 
 .form_button {
@@ -114,18 +124,18 @@ p {
   border: 0;
   color: #000;
   font-family: 'Inter';
-  margin-top: 5px;
-  margin-left: 2.5em;
-  font-family: 'Inter';
   font-weight: 600;
+  font-size: medium;
   cursor: pointer;
+  margin: auto;
+  display: block;
 }
 
 hr {
   border: 0;
   height: 1px;
   background-color: #000000;
-  width: 18em;
+  width: 28vw;
   /*background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));*/
 }
 
