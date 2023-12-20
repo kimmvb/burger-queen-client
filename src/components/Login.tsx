@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Logo from '../assets/Logo.svg';
 import styles from './Login.module.css';
-import { postLoginData } from './data/Postdata';
+import { postLoginData } from './api/Postdata';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -45,7 +45,7 @@ const Login = () => {
         localStorage.setItem('password', password);
       }
 
-      navigate('/home');
+      navigate('/');
     } catch (error) {
       setErrorCredentials(true);
       setEmail('');
@@ -57,7 +57,7 @@ const Login = () => {
   return (
     <div className={styles.login}>
       <section className={styles.left_side}>
-        <img src={Logo} className={styles.logo} />
+        <img src={Logo} className={styles.logo} alt="burger-queen-logo" />
       </section>
       <section className={styles.right_side}>
         <div className={styles.container_form}>
@@ -69,14 +69,17 @@ const Login = () => {
           <form className={styles.form_login} onSubmit={handleFormSubmit}>
             <label htmlFor="email">Correo electrónico</label>
             <input
+              id="email"
               type="email"
               name="email"
               value={email}
               className={styles.inputs_form}
               onChange={handleEmailChange}
+              autoComplete="on"
             />
             <label htmlFor="password">Contraseña</label>
             <input
+              id="password"
               type="password"
               name="password"
               value={password}

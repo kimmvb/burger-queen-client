@@ -2,7 +2,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Login from './components/Login';
 import HomeWaiter from './components/HomeWaiter';
-import { PrivateRoutes } from './utils/PrivateRoutes';
+import { PrivateRoutes, AnonymousRoutes } from './utils/PrivateRoutes';
 
 function App() {
   return (
@@ -10,9 +10,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<PrivateRoutes />}>
-            <Route element={<HomeWaiter />} path='/home'/>
+            <Route element={<HomeWaiter />} path="/" />
           </Route>
-          <Route path="/" element={<Login />} />
+          <Route element={<AnonymousRoutes />}>
+            <Route element={<Login />} path="/login" />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

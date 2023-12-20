@@ -1,7 +1,9 @@
+import { SideMenu } from './SideMenu';
+
 const HomeWaiter = () => {
   return (
     <>
-      <p>Home</p>
+      <SideMenu />
     </>
   );
 };
