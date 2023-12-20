@@ -1,0 +1,97 @@
+.billContainer {
+  width: 42vw;
+  border-radius: 30px;
+  border: 1px solid #000;
+  background: #fff;
+  margin: 25px 0px;
+  color: #000;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+  grid-template-rows: repeat(2, 44px);
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  margin: 25px 35px;
+  padding-bottom: 20px;
+  border-bottom: solid black 1px;
+}
+
+.counterItem {
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #ffeebf;
+  width: 70px;
+  padding: 5px;
+  font-family: 'Inter', sans-serif;
+  justify-self: flex-end;
+}
+
+.plusMinus {
+  height: 100%;
+  width: 30%;
+  background: #ffeebf;
+  border: none;
+  font-size: larger;
+  color: #000;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.counterItem input {
+  text-align: center;
+  border: none;
+  background: #ffeebf;
+  color: black;
+  width: 25px;
+  font-family: 'Inter', sans-serif;
+  font-size: large;
+  outline: none;
+}
+
+.counterItem input[type='number'] {
+  -webkit-appearance: textfield !important;
+  -moz-appearance: textfield !important;
+  appearance: textfield !important;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.totalBill {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.totalBill button {
+  border-radius: 15px;
+  background: #4ff916;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.2);
+  border: none;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: larger;
+  width: 120px;
+  height: 50px;
+  cursor: pointer;
+  transition:
+    transform 0.1s,
+    background-color 0.2s;
+}
+
+.totalBill button:hover {
+  transform: scale(1.1);
+}
+
+.totalBill button:active {
+  background-color: #161E11;
+  color: #ffeebf;
+}

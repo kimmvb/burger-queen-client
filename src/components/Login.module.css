@@ -38,6 +38,16 @@
     url(../fonts/GFSNeohellenic-Bold.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'GFSNeohellenic';
+  font-style: italic;
+  font-weight: 400;
+  src:
+    local('GFSNeohellenic italic'),
+    local('GFSNeohellenic-italic'),
+    url(../fonts/GFSNeohellenic-Italic.ttf) format('truetype');
+}
+
 .login {
   display: flex;
   flex-wrap: wrap;

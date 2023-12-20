@@ -1,9 +1,11 @@
-import { SideMenu } from './SideMenu';
+import SideMenu from './SideMenu';
+import NewOrderFood from './NewOrderFood';
 
 const HomeWaiter = () => {
   return (
     <>
       <SideMenu />
+      <NewOrderFood />
     </>
   );
 };

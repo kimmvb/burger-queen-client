@@ -12,13 +12,13 @@ import {
 import styles from './SideMenu.module.css';
 import { useNavigate } from 'react-router-dom';
 
-export const SideMenu = () => {
+const SideMenu = () => {
   const navigate = useNavigate();
 
   const handleClickLogOut = () => {
     localStorage.clear();
     navigate('/login');
-  }
+  };
 
   return (
     <aside className={styles.sidebar}>
@@ -60,3 +60,5 @@ export const SideMenu = () => {
     </aside>
   );
 };
+
+export default SideMenu;
